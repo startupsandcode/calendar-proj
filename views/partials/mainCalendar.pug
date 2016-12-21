@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    .calendar
+        .year
+            button#yearPrev
+                img(src='images/prev.png' alt='yearPrev')
+            h1#year
+            button#yearNext
+                img(src='/images/next.png' alt='yearNext')
+        .month
+            button.monthPrev#monthPrev
+                img(src='/images/prev.png' alt='monthPrev')
+            h1#month
+            button.monthNext#monthNext
+                img(src='/images/next.png' alt='monthNext')
+        .week
+            ul#daysOfWeek
+                li Sun
+                li Mon
+                li Tue
+                li Wed
+                li Thu
+                li Fri
+                li Sat
+
+        table#calendarDays
+

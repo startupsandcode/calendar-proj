@@ -1,13 +1,40 @@
-@import "https://fonts.googleapis.com/css?family=Baloo|Bungee";
+@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
 body {
   background: #e2e1e0;
   margin: 0 auto;
-  font-family: "Baloo"; }
+  font-family: 'Roboto';
+  font-weight: 300; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #2196fd;
+  padding: 20px;
+  color: #e3f2fd;
+  font-weight: 600;
+  font-size: 1.5em; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .calendar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   background: white;
   margin: auto;
   margin-top: 5%;
+  margin-bottom: 5%;
   height: 700px;
   max-width: 800px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
@@ -16,7 +43,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #3B84C0;
+  background-color: #2196fd;
   color: white; }
 
 .month {
@@ -47,7 +74,7 @@ table {
 td {
   font-size: 25px;
   text-align: center; }
-  td :hover {
+  td:hover {
     color: white;
     background-color: #3B84C0; }
 
@@ -55,12 +82,11 @@ td {
 button {
   background: transparent;
   border: none; }
-  button :hover {
+  button:focus {
+    outline: 0; }
+  button:hover {
     border: none;
     background-color: rgba(0, 0, 0, 0.3); }
-
-button, img:focus {
-  outline: 0; }
 
 #info {
   color: black;

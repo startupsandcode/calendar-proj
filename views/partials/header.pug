@@ -1,4 +1,37 @@
 nav
     .navbar
+
+        - if (currentUser) {
+
         .logo LOGO
-        .userName John Smith
+        .userInfo
+            ul
+                li: a(href="#")=currentUser.local.email
+                li: a(href="/logout") Logout
+
+        - } else {
+
+        .logo LOGO
+        .userInfo
+            ul
+                li: a(href="/login") Login
+                li: a(href='/signup') Signup
+
+        - }
+
+
+.flash
+- if (typeof message !== 'undefined') {
+- if (typeof message.error !== 'undefined' && message.error.length > 0) {
+.card-panel.red.center-align
+    h5(style="color:white;")= message.error
+- }
+- if (typeof message.info !== 'undefined' && message.info.length > 0) {
+.card-panel.blue.center-align
+    h5(style="color:white;")= message.info
+- }
+- if (typeof message.success !== 'undefined' && message.success.length > 0) {
+.card-panel.green.center-align
+    h5(style="color:white;")= message.success
+- }
+- }

@@ -1,0 +1,18 @@
+extends ../../layout
+
+block content
+    .div
+        h2 Login
+
+        form#loginForm(method="post" action="/login")
+            .row
+                input(type="email" name="login_email")#login_email.validate
+                label(for="login_email") Email
+            .row
+                input(type="password" name="login_password")#login_password.validate
+                label(for="login_password") Password
+            .row
+                button(type="submit") Go!
+
+            .row
+                h5 Don't have an account yet? #[a(href="/signup") Create one!]

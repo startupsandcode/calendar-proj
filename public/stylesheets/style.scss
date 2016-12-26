@@ -15,14 +15,14 @@ html {
 }
 
 body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: $background-color;
   margin:0 auto;
   font-family:'Roboto';
   font-weight: 300;
-
 }
-
-
 
 .navbar {
   display: flex;
@@ -66,12 +66,48 @@ body{
   }
 }
 
+.main-content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
 
 .footer{
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $mainThemeColor;
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row{
+      display:flex;
+      justify-content: space-between;
+      margin: 5px;
+    }
+
+    button{
+      width:100%;
+      background-color:$mainThemeColor;
+      color: white;
+      padding: 10px;
+      &:hover{
+        background-color: lighten($mainThemeColor,10%);
+      }
+    }
+  }
+
 
 }
 
@@ -86,6 +122,7 @@ body{
   height:700px;
   max-width: 800px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
 }
 
 .year{
@@ -140,6 +177,7 @@ td{
 
 
 /*buttons*/
+
 button {
   background:transparent;
   border:none;
@@ -153,8 +191,6 @@ button {
       background-color: rgba(0, 0, 0, 0.3);
     }
 }
-
-
 
 #info {
   color: black;

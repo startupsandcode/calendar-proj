@@ -6,6 +6,9 @@ html {
   box-sizing: border-box; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: #e2e1e0;
   margin: 0 auto;
   font-family: 'Roboto';
@@ -40,11 +43,38 @@ body {
       .navbar .nav-right a:hover {
         background-color: #54aefd; }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto; }
+
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #2196fd; }
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px; }
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .login-container form .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px; }
+    .login-container form button {
+      width: 100%;
+      background-color: #2196fd;
+      color: white;
+      padding: 10px; }
+      .login-container form button:hover {
+        background-color: #54aefd; }
 
 .calendar {
   display: flex;

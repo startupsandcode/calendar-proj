@@ -22,17 +22,50 @@ body{
 
 }
 
+
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   background: $mainThemeColor;
-  padding: 20px;
   color: $lightFontColor;
   font-weight: 600;
   font-size: 1.5em;
+  height: 100px;
+
+  .nav-left{
+    padding:15px;
+  }
+
+  .nav-right {
+    height: 100%;
+    display:flex;
+    align-items: center;
+
+      .nav-item{
+        padding: 15px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        height:100%;
+
+        &:link, &:visited {
+          text-decoration: none;
+          color: $lightFontColor;
+        }
+
+        &:hover{
+          background-color: lighten($mainThemeColor,10%);
+        }
+      }
+  }
 }
+
 
 .footer{
   display: flex;

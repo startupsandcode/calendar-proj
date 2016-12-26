@@ -17,10 +17,28 @@ body {
   justify-content: space-between;
   width: 100%;
   background: #2196fd;
-  padding: 20px;
   color: #e3f2fd;
   font-weight: 600;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  height: 100px; }
+  .navbar .nav-left {
+    padding: 15px; }
+  .navbar .nav-right {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .navbar .nav-right .nav-item {
+      padding: 15px; }
+    .navbar .nav-right a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      height: 100%; }
+      .navbar .nav-right a:link, .navbar .nav-right a:visited {
+        text-decoration: none;
+        color: #e3f2fd; }
+      .navbar .nav-right a:hover {
+        background-color: #54aefd; }
 
 .footer {
   display: flex;

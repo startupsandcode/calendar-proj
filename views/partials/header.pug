@@ -1,24 +1,27 @@
+- var brand = "Calendarlyify"
+
 nav
     .navbar
 
         - if (currentUser) {
 
-        .logo LOGO
-        .userInfo
-            ul
-                li: a(href="#")=currentUser.local.email
-                li: a(href="/logout") Logout
+        .nav-left=brand
+        .nav-right
+            a(href="#")
+                .nav-item=currentUser.local.email
+            a(href="/logout")
+                .nav-item Logout
 
         - } else {
 
-        .logo LOGO
-        .userInfo
-            ul
-                li: a(href="/login") Login
-                li: a(href='/signup') Signup
+        .nav-left=brand
+        .nav-right
+            a(href="/login")
+                .nav-item Login
+            a(href='/signup')
+                .nav-item Signup
 
         - }
-
 
 .flash
 - if (typeof message !== 'undefined') {

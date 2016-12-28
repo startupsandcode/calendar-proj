@@ -80,21 +80,45 @@ body{
   background-color: $mainThemeColor;
 }
 
-.login-container{
+.login-signup-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 270px;
+  width: 350px;
+  margin: 15px;
 
   form{
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    .row{
-      display:flex;
-      justify-content: space-between;
-      margin: 5px;
+    .flex-outer, li, label {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    ul{
+      padding: 0;
+    }
+
+    li{
+      flex: 1 0 210px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    label, input {
+      flex: 1 0 150px;
+      max-width: 200px;
+    }
+
+    input{
+      flex: 1 0 150px;
+      max-width: 100%;
+      padding: 8px 16px;
+      border: none;
+      outline: 0;
     }
 
     button{

@@ -55,25 +55,41 @@ body {
   justify-content: center;
   background-color: #2196fd; }
 
-.login-container {
+.login-signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 270px; }
-  .login-container form {
+  width: 350px;
+  margin: 15px; }
+  .login-signup-container form {
     display: flex;
     flex-direction: column;
     width: 100%; }
-    .login-container form .row {
+    .login-signup-container form .flex-outer, .login-signup-container form li, .login-signup-container form label {
       display: flex;
-      justify-content: space-between;
-      margin: 5px; }
-    .login-container form button {
+      flex-wrap: wrap;
+      align-items: center; }
+    .login-signup-container form ul {
+      padding: 0; }
+    .login-signup-container form li {
+      flex: 1 0 210px;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .login-signup-container form label, .login-signup-container form input {
+      flex: 1 0 150px;
+      max-width: 200px; }
+    .login-signup-container form input {
+      flex: 1 0 150px;
+      max-width: 100%;
+      padding: 8px 16px;
+      border: none;
+      outline: 0; }
+    .login-signup-container form button {
       width: 100%;
       background-color: #2196fd;
       color: white;
       padding: 10px; }
-      .login-container form button:hover {
+      .login-signup-container form button:hover {
         background-color: #54aefd; }
 
 .calendar {

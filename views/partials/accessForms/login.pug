@@ -1,20 +1,20 @@
 extends ../../layout
 
 block content
-    .login-container
-        h2 Login
+    .login-signup-container
+        h1 Login
 
         hr
 
         form#loginForm(method="post" action="/login")
-            .row
-                label(for="login_email") Email
-                input(type="email" name="login_email")#login_email.validate
-            .row
-                label(for="login_password") Password
-                input(type="password" name="login_password")#login_password.validate
-            .row
-                button(type="submit") Go!
+            ul.flex-outer
+                li
+                    label(for="login_email") Email
+                    input(type="email" name="login_email")#login_email.validate
+                li
+                    label(for="login_password") Password
+                    input(type="password" name="login_password")#login_password.validate
+                li
+                    button(type="submit") Go!
 
-        .row
-            h5 Don't have an account yet? #[a(href="/signup") Create one!]
+        h5 Don't have an account yet? #[a(href="/signup") Create one!]

@@ -1,18 +1,21 @@
 extends ../../layout
 
 block content
-    .div
-        h2 Signup Form Goes Here
+    .login-signup-container
+        h2 Signup
+
+        br
 
         form#signupForm(method="POST" action="/signup")
-            .row
-                input(type="email" name="signup_email")#signup_email.validate
-                label(for="signup_email") Email
-            .row
-                input(type="password" name="signup_password")#signup_password.validate
-                label(for="signup_password") Password
-            .row
-                input(type="password" name="signup_password2")#signup_password2.validate
-                label(for="signup_password2") Confirm Password
-            .row
-                button(type="submit") Go!
+            ul.flex-outer
+                li
+                    label(for="signup_email") Email
+                    input(type="email" name="signup_email")#signup_email.validate
+                li
+                    label(for="signup_password") Password
+                    input(type="password" name="signup_password")#signup_password.validate
+                li
+                    label(for="signup_password2") Confirm Password
+                    input(type="password" name="signup_password2")#signup_password2.validate
+                li
+                    button(type="submit") Go!

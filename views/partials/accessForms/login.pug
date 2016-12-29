@@ -4,7 +4,10 @@ block content
     .login-signup-container
         h1 Login
 
-        hr
+        a(href="/auth/google")
+            img(src='images/btn_google_signin_light_focus_web@2x.png' height="50" width="200")
+
+        h3 Or
 
         form#loginForm(method="post" action="/login")
             ul.flex-outer

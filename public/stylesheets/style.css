@@ -53,7 +53,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2196fd; }
+  background-color: #2196fd;
+  color: white; }
 
 .login-signup-container {
   display: flex;

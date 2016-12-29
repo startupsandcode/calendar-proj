@@ -7,8 +7,15 @@ nav
 
         .nav-left=brand
         .nav-right
+
+            - if (currentUser.local.email){
             a(href="#")
                 .nav-item=currentUser.local.email
+            - }
+            - if (currentUser.google.email){
+            a(href="#")
+                .nav-item=currentUser.google.email
+            - }
             a(href="/logout")
                 .nav-item Logout
 

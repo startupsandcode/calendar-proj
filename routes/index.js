@@ -44,6 +44,15 @@ router.post('/login', function(req, res, next) {
   return loginProperty(req, res, next);
 });
 
+router.get('/auth/google', passport.authenticate('google-login', { scope : ['profile', 'email'] }));
+
+// the callback after google has authenticated the user
+router.get('/auth/google/callback',
+    passport.authenticate('google-login', {
+      successRedirect : '/calendar',
+      failureRedirect : '/'
+    }));
+
 router.get('/logout', function(req, res, next) {
   req.logout();
   res.redirect('/');

@@ -12,10 +12,15 @@ var myCalendar = {
         $('#yearPrev').on('click', this.yearPrev);
         $('#monthNext').on('click', this.monthNext);
         $('#monthPrev').on('click', this.monthPrev);
+        $('.date').on('click', this.selectedDate);
     },
-
+    createDay: function(currentDay,today){
+        var styles = currentDay == today? 'date currentDay' : 'date';
+        return '<td class="' + styles + '">' + currentDay + '</td>';
+    },
     buildCalendar: function (date) {
         $('#calendarDays').html('');
+        var today = date.date();
         var startDay = date.startOf('month').day();
         var lastDay = date.daysInMonth();
         //First Row
@@ -25,7 +30,7 @@ var myCalendar = {
             if (startDay > i) {
                 calendarRow += '<td></td>';
             } else {
-                calendarRow += '<td>' + currentDay + '</td>';
+                calendarRow += this.createDay(currentDay,today);
                 currentDay++;
             }
         }
@@ -37,7 +42,7 @@ var myCalendar = {
             calendarRow = '<tr>';
             for (var i = 0; i < 7; i++) {
                 if (currentDay < lastDay) {
-                    calendarRow += '<td>' + currentDay + '</td>';
+                    calendarRow += this.createDay(currentDay,today);
                     currentDay++;
                 }
             }
@@ -50,7 +55,7 @@ var myCalendar = {
             calendarRow = '<tr>';
             for (var i = 0; i < 7; i++) {
                 if (currentDay <= lastDay) {
-                    calendarRow += '<td>' + currentDay + '</td>';
+                    calendarRow += this.createDay(currentDay,today);
                     currentDay++;
                 }else{
                     calendarRow += '<td></td>';
@@ -85,6 +90,8 @@ var myCalendar = {
         myCalendar.buildCalendar(currentDate);
     },
     selectedDate: function (event) {
+        $('.date').removeClass('selected');
+        $(event.target).addClass('selected');
     }
 
 }

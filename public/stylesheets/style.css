@@ -119,6 +119,16 @@ body {
   background: #e2e1dd;
   color: #555555; }
 
+.currentDay{
+  background: #ee88dd;
+}
+
+.selected{
+  transition: all 0.6s;
+  background: #3ddffd !important;
+  color: white;
+}
+
 #daysOfWeek {
   display: flex;
   flex-direction: row;
